@@ -2,6 +2,23 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
+
+  <PropertyGroup>
+    <Obfuscate>true</Obfuscate>
+    <ConfuserReplaceOutput>true</ConfuserReplaceOutput>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="TestApp.Lib.crproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Confuser.MSBuild" Version="1.4.0-alpha-g52b6086527">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
 </Project>
